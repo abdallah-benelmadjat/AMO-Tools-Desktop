@@ -114,6 +114,7 @@ export class SsmtComponent implements OnInit {
         this.router.navigate(['/not-found'], { queryParams: { measurItemType: 'assessment' } });
       } else {
         this.assessment.ssmt = (JSON.parse(JSON.stringify(this.assessment.ssmt)));
+        debugger;
         if (this.assessment.ssmt.modifications) {
           if (this.assessment.ssmt.modifications.length !== 0) {
             this.modificationExists = true;

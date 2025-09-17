@@ -61,6 +61,8 @@ export class BackupDataService {
       settings: this.getSettings(this.settingsDbService.dbSettings.getValue()),
     };
 
+    debugger;
+    console.log(backupFile);
     await this.setCustomMaterials(backupFile);
     return backupFile;
   }

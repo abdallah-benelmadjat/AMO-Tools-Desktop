@@ -115,6 +115,19 @@ export class ImportBackupService {
     // * delete current root directory settings
     await firstValueFrom(this.settingsDbService.deleteByIdWithObservable(1));
 
+    // if (measurBackupFile.settings && measurBackupFile.settings.length !== 0) {
+    //   measurBackupFile.settings = measurBackupFile.settings.filter(settings => {
+    //     if ((settings as any)['type'] !== undefined) {
+    //       // * settings object is actually an assessment from malformed data
+    //       console.log(settings);
+    //       return false;
+    //     }
+    //     return true;
+    //   });
+    // }
+
+    // debugger;
+
     for await (let settings of measurBackupFile.settings) {
       let oldDirectoryId = settings.directoryId;
       let oldAssessmentId = settings.assessmentId;
@@ -132,6 +145,7 @@ export class ImportBackupService {
         oldDirectoryId = undefined;
       }
 
+      debugger;
       let newSettings: Settings = await firstValueFrom(this.settingsDbService.addWithObservable(settings));
       if (oldAssessmentId !== undefined && oldAssessmentId !== null) {
         this.importAssessmentSettingsIdMap[oldAssessmentId] = newSettings.id;

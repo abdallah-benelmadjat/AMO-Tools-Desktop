@@ -80,6 +80,8 @@ export class BoilerService {
 
   getRanges(settings: Settings): BoilerRanges {
     //TODO: Use "Saturation Temp @ HP" ?
+    debugger;
+    
     let tmpSteamTemperatureMin: number = this.convertUnitsService.value(0).from('F').to(settings.steamTemperatureMeasurement);
     tmpSteamTemperatureMin = this.convertUnitsService.roundVal(tmpSteamTemperatureMin, 0);
     let tmpSteamTemperatureMax: number = this.convertUnitsService.value(1472).from('F').to(settings.steamTemperatureMeasurement);

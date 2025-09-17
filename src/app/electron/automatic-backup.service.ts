@@ -56,6 +56,7 @@ export class AutomaticBackupService {
   }
 
   subscribeToDataChanges() {
+    debugger;
       this.observableDataChanges = this.assessmentDbService.dbAssessments.pipe(
         combineLatestWith([
           this.inventoryDbService.dbInventories,
@@ -77,6 +78,7 @@ export class AutomaticBackupService {
       );
 
       this.observableDataChanges.subscribe(dataChanges => {
+        console.log(this.settingsDbService.dbSettings.getValue());
         this.saveBackup();
       });
   }
