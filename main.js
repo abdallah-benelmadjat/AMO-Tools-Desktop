@@ -30,6 +30,8 @@ app.on('ready', function () {
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
+      webSecurity: false, // Disable web security for Electron app
+      allowRunningInsecureContent: true,
       preload: path.join(__dirname, 'preload.js')
     }
   });
