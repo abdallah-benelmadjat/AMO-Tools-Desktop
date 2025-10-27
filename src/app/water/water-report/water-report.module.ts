@@ -7,7 +7,7 @@ import { ExecutiveSummaryComponent } from './executive-summary/executive-summary
 import { SystemTrueCostReportComponent } from './system-true-cost-report/system-true-cost-report.component';
 import { SystemTrueCostBarComponent } from './system-true-cost-bar/system-true-cost-bar.component';
 import { WaterReportService } from './water-report.service';
-import { SystemSummaryPieComponent } from './system-summary-pie/system-summary-pie.component';
+import { SourceIntakePieComponent } from './source-intake-pie/source-intake-pie.component';
 import { PrintOptionsMenuModule } from '../../shared/print-options-menu/print-options-menu.module';
 import { AlertInfoContainerComponent } from '../../shared/alert-info-container/alert-info-container.component';
 import { ExportableResultsTableModule } from '../../shared/exportable-results-table/exportable-results-table.module';
@@ -19,7 +19,7 @@ import { ExportableResultsTableModule } from '../../shared/exportable-results-ta
     SystemSummaryReportComponent,
     SystemTrueCostReportComponent,
     SystemTrueCostBarComponent,
-    SystemSummaryPieComponent
+  SourceIntakePieComponent
   ],
   imports: [
     CommonModule,

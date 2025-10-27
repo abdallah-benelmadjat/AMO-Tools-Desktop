@@ -43,7 +43,7 @@ export class SystemSummaryReportComponent {
     let diagram: Diagram = this.updateDiagramFromAssessmentService.getDiagramFromAssessment(this.assessment);
     let nodeErrors: NodeErrors = diagram.waterDiagram.flowDiagramData.nodeErrors;
 
-    this.systemSummaryReportSubscription = this.waterReportService.systemSummaryReport.subscribe(report => {
+    this.systemSummaryReportSubscription = this.waterReportService.plantSummaryReport.subscribe(report => {
       this.isDiagramValid = getIsDiagramValid(nodeErrors);
       this.plantSummaryResults = this.isDiagramValid ? report : this.waterAssessmentResultsService.getEmptyPlantSystemSummaryResults();
     });

@@ -7,13 +7,14 @@ import { PlantSystemSummaryResults } from 'process-flow-lib';
 @Injectable()
 export class WaterReportService {
   systemTrueCostReport: BehaviorSubject<SystemTrueCostData[]>;
-  systemSummaryReport: BehaviorSubject<PlantSystemSummaryResults>;
+  plantSummaryReport: BehaviorSubject<PlantSystemSummaryResults>;
   constructor() {
      this.systemTrueCostReport = new BehaviorSubject<SystemTrueCostData[]>(undefined);
-     this.systemSummaryReport = new BehaviorSubject<PlantSystemSummaryResults>(undefined);
+     this.plantSummaryReport = new BehaviorSubject<PlantSystemSummaryResults>(undefined);
    }
 
    getSortedTrueCostReport(report: SystemTrueCostData[]): SystemTrueCostData[] {
+    // todo hardcoded index, investigate, improve
      return _.orderBy(report, item => item.connectionCostByType[7] || 0, 'desc');
    }
 }
