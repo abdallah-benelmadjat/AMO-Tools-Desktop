@@ -8,6 +8,7 @@ import { SystemTrueCostReportComponent } from './system-true-cost-report/system-
 import { SystemTrueCostBarComponent } from './system-true-cost-bar/system-true-cost-bar.component';
 import { WaterReportService } from './water-report.service';
 import { SourceIntakePieComponent } from './source-intake-pie/source-intake-pie.component';
+import { TrueCostPieComponent } from './true-cost-pie/true-cost-pie.component';
 import { PrintOptionsMenuModule } from '../../shared/print-options-menu/print-options-menu.module';
 import { AlertInfoContainerComponent } from '../../shared/alert-info-container/alert-info-container.component';
 import { ExportableResultsTableModule } from '../../shared/exportable-results-table/exportable-results-table.module';
@@ -19,7 +20,8 @@ import { ExportableResultsTableModule } from '../../shared/exportable-results-ta
     SystemSummaryReportComponent,
     SystemTrueCostReportComponent,
     SystemTrueCostBarComponent,
-  SourceIntakePieComponent
+    SourceIntakePieComponent,
+    TrueCostPieComponent
   ],
   imports: [
     CommonModule,

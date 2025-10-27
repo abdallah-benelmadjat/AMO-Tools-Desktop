@@ -123,7 +123,10 @@
     <app-exportable-results-table [tableString]="copyTableString" [horizontalAnchor]="'right'"
     (updateTableString)="updateCopyTableString()"></app-exportable-results-table>
 
-    <app-system-summary-pie class="print-width"></app-system-summary-pie>
+    <div class="d-flex w-100">
+        <app-system-summary-pie class="print-width"></app-system-summary-pie>
+        <app-true-cost-pie class="print-width"></app-true-cost-pie>
+    </div>
 
     }
 
